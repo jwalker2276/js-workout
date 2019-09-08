@@ -1,0 +1,25 @@
+{
+  "name": "js-workout",
+  "version": "1.0.0",
+  "description": "A javascript workout to keep my skills sharp when I'm not building new things.",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwalker2276/js-workout.git"
+  },
+  "keywords": [],
+  "author": "Jordan Walker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwalker2276/js-workout/issues"
+  },
+  "homepage": "https://github.com/jwalker2276/js-workout#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.3"
+  }
+}
