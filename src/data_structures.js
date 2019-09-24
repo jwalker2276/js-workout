@@ -125,3 +125,72 @@ exports.testOnlySmallStringsFilter = () => {
 // ----------------------------------------------------------
 
 // Object Test
+
+const data = {
+  0: "Matt",
+  1: "David",
+  2: "Ashley"
+};
+
+// Fill in the method to return an array of object keys
+const objectKeysArr = Object.keys(data);
+// Fill in the method to return an array of object values
+const objectValuesArr = Object.values(data);
+
+//! Tests
+exports.testObjectMethodOne = () => {
+  return objectKeysArr;
+};
+exports.testObjectMethodTwo = () => {
+  return objectValuesArr;
+};
+
+// Other Loops
+
+const nums = {
+  first: 1,
+  second: 57,
+  third: 89,
+  last: -11
+};
+
+let stringOfNumKeys = "";
+
+// Loop through nums and return this string
+//* "first_second_third_last_"
+for (let x in nums) {
+  stringOfNumKeys += `${x}_`;
+}
+
+//! Test
+exports.testObjectLoopOne = () => {
+  return stringOfNumKeys;
+};
+
+let stringOfValues = "";
+// Loop through nums and return this string
+//* "1_57_89_-11_"
+for (let x in nums) {
+  stringOfValues += `${nums[x]}_`;
+}
+
+//! Test
+exports.testObjectLoopTwo = () => {
+  return stringOfValues;
+};
+
+const numsIterable = [1, 57, 89, -11];
+let sumOfNumbers = 0;
+// Use the other for ** loop on numsIterable to sum the array.
+for (let x of numsIterable) {
+  sumOfNumbers += x;
+}
+
+//! Test
+exports.testObjectLoopThree = () => {
+  return sumOfNumbers;
+};
+
+// console.log(stringOfNumKeys);
+// console.log(stringOfValues);
+// console.log(sumOfNumbers);

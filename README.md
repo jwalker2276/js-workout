@@ -1,2 +1,2 @@
 # js-workout
-A javascript workout project with test.
+A javascript workout project with tests.
