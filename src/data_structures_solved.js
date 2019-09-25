@@ -1,4 +1,4 @@
-console.log("Objects and Arrays");
+console.log("Data Strutures");
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -14,7 +14,9 @@ const sum = arr => {
 
   let total = 0;
 
-  // For Loop
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
 
   return total;
 };
@@ -36,7 +38,9 @@ const sumReduce = arr => {
    * @return sum of the numbers
    */
 
-  // const total =
+  const total = arr.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
 
   return total;
 };
@@ -57,9 +61,9 @@ const filterOddNumbers = arr => {
    * @param arr array of numbers
    * @return arr array of even numbers
    */
-
-  // const evenNumbers =
-
+  const evenNumbers = arr.filter(currentValue => {
+    return currentValue % 2 === 0;
+  });
   return evenNumbers;
 };
 
@@ -85,18 +89,28 @@ const words = [
 
 //! Make the words array look like this.
 //* Rules :
-//* Only strings
-//* Remove spaces first
-//* no words longer than 5 characters
+// Only strings
+// Remove spaces first
+// no words longer than 5 characters
 //! Final Array = ["test, "is", "a", "trash", "space"];
 const onlySmallStringsFilter = arr => {
-  //* Filter out numbers
+  // Filter out numbers
+  const justWordsArr = arr.filter(value => typeof value === "string");
 
-  //* Remove spaces function
+  // Remove spaces function
+  const removeSpaces = word => {
+    return word.split(" ").join("");
+  };
 
-  //* Remove the spaces
+  // Remove the spaces
+  const noSpacesArr = justWordsArr.map(word => {
+    return removeSpaces(word);
+  });
 
-  //* Remove strings that are longer than 5 characters
+  // Remove strings that are longer than 5 characters
+  const finalArray = noSpacesArr.filter(word => {
+    return word.length <= 5;
+  });
 
   return finalArray;
 };
@@ -118,10 +132,10 @@ const data = {
   2: "Ashley"
 };
 
-//* Fill in the method to return an array of object keys
-// const objectKeysArr =
-//* Fill in the method to return an array of object values
-// const objectValuesArr =
+// Fill in the method to return an array of object keys
+const objectKeysArr = Object.keys(data);
+// Fill in the method to return an array of object values
+const objectValuesArr = Object.values(data);
 
 //! Tests
 exports.testObjectMethodOne = () => {
@@ -144,6 +158,9 @@ let stringOfNumKeys = "";
 
 // Loop through nums and return this string
 //* "first_second_third_last_"
+for (let x in nums) {
+  stringOfNumKeys += `${x}_`;
+}
 
 //! Test
 exports.testObjectLoopOne = () => {
@@ -153,6 +170,9 @@ exports.testObjectLoopOne = () => {
 let stringOfValues = "";
 // Loop through nums and return this string
 //* "1_57_89_-11_"
+for (let x in nums) {
+  stringOfValues += `${nums[x]}_`;
+}
 
 //! Test
 exports.testObjectLoopTwo = () => {
@@ -162,6 +182,9 @@ exports.testObjectLoopTwo = () => {
 const numsIterable = [1, 57, 89, -11];
 let sumOfNumbers = 0;
 // Use the other for ** loop on numsIterable to sum the array.
+for (let x of numsIterable) {
+  sumOfNumbers += x;
+}
 
 //! Test
 exports.testObjectLoopThree = () => {
