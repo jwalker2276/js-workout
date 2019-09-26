@@ -1,35 +1,29 @@
 console.log("OOP");
 
-//! Create base class
-//
-//* Write a constructor with the owner of vehicle
-//* Define getter for type
-//* Define setter for type
-//* Define method to output this message.
+//! Create base class called "Vehicle"
+//* Write a constructor that takes a string name for the owner of the vehicle
+//* Define getter "getOwner" for the owner member
+//* Define setter "setOwner" for the owner member
+//* Define a method "outputOwner" to return this message.
 // "The owner of the vehicle is John Smith.";
-//
 
-//! Extend the vehicle class to be a car.
-//
-//* Write a constructor with the owner and price of the car.
-//* Define getter and setter for the car's price.
-//* Define a method to output this message.
-// "The owner of this car is John Smith and the price is 5000".
+// Vehicle Class
 
-//! Create two cars named carOne, carTwo
-// Owners (John, Sam)
-// Price (5000, 15000)
+//! Extend the vehicle class and name it Car.
+//* Write a constructor that takes in the owner and price of the car.
+//* Define getter "getPrice" and setter "setPrice" for the car members.
+//* Define a method "outputOwnerAndPrice" to return this message.
+// "The owner of this car is John Smith and the price is $5000".
 
-//! Set the owner of carOne to "James"
+// Car Class
 
-//! Set the price of carTwo to 25000
+//! Create two cars carOne, carTwo
+// carOne = John, 5000
+// carTwo = Sam, 15000
 
-// Log statements for manual testing
-//// Output the owner of carOne
-////console.log(carOne.outputOwner());
-//// Output the owner and price of both cars.
-////console.log(carOne.outputOwnerAndPrice());
-////console.log(carTwo.outputOwnerAndPrice());
+//! Update the owner of carOne to "James"
+
+//! Update the price of carTwo to 25000
 
 //! Functions for tests
 exports.testClassOneConstruction = () => {
