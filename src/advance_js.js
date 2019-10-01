@@ -72,11 +72,11 @@ const counter = (function() {
   };
 })();
 
-console.log(counter);
-console.dir(counter);
-console.log(counter.value()); // logs 0
+//console.log(counter);
+//console.dir(counter);
+//console.log(counter.value()); // logs 0
 counter.increment();
 counter.increment();
-console.log(counter.value()); // logs 2
+//console.log(counter.value()); // logs 2
 counter.decrement();
-console.log(counter.value()); // logs 1
+//console.log(counter.value()); // logs 1
